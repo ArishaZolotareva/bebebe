@@ -6,6 +6,10 @@ const routes = [
     path: '/',
     component: () => import('@/layouts/default/Default.vue'),
   },
+  {
+    path: '/contacts',
+    component: () => import('@/components/Contacts.vue'),
+  },
 ]
 
 const router = createRouter({
