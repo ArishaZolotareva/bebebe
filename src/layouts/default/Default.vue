@@ -20,7 +20,8 @@ let drawer = ref(true)
 
 
     <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
-      Main Content
+      
+      <router-view />
     </v-main>
     <v-main style="height: 250px">
       <div class="d-flex justify-center align-center h-100">
