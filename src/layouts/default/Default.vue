@@ -4,7 +4,9 @@ let drawer = ref(true)
 </script >
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar title="Application bar"></v-app-bar>
+    <v-app-bar title="Application bar"> <v-btn variant="elevated" color="deep-purple-darken-2" @click="drawer = !drawer">
+        Toggle
+      </v-btn></v-app-bar>
 
     <v-navigation-drawer v-model="drawer" temporary>
       <v-list>
@@ -14,21 +16,19 @@ let drawer = ref(true)
       <v-list density="compact" nav>
         <v-list-item prepend-icon="mdi-view-dashboard" title="Main" value="home"></v-list-item>
         <v-list-item prepend-icon="mdi-message-text" title="Contacs" value="about"></v-list-item>
-        <v-list-item prepend-icon="mdi-forum" title="Flys" value="about"></v-list-item>
+        <v-list-item prepend-icon="mdi-delete" title="Flys" value="about"></v-list-item>
       </v-list>
     </v-navigation-drawer>
 
 
     <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
-      
+
       <router-view />
     </v-main>
     <v-main style="height: 250px">
-      <div class="d-flex justify-center align-center h-100">
-  
-        <v-btn color="primary" @click="drawer = !drawer">
-          Toggle
-        </v-btn>
+      <div class="d-flex justify-end h-100">
+
+
       </div>
     </v-main>
   </v-layout>
