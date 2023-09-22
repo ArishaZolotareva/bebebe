@@ -14,7 +14,8 @@
     </v-navigation-drawer>
 
     <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
-      Main Content
+      
+      <router-view />
     </v-main>
   </v-layout>
 </template>
