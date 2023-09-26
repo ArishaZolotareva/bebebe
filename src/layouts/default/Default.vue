@@ -4,32 +4,33 @@ let drawer = ref(true)
 </script >
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar title="Application bar"> <v-btn variant="elevated" color="deep-purple-darken-2" @click="drawer = !drawer">
-        Toggle
-      </v-btn></v-app-bar>
+    <v-app-bar title="Application bar"><v-btn density="compact" variant="elevated" icon="mdi-view-list" size="x-large"
+        color="deep-purple-darken-2" @click="drawer = !drawer"></v-btn></v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" temporary>
+    <v-navigation-drawer v-model="drawer">
       <v-list>
         <v-list-item title="Navigation drawer"></v-list-item>
       </v-list>
       <v-divider></v-divider>
       <v-list density="compact" nav>
-        <v-list-item prepend-icon="mdi-view-dashboard" title="Main" value="home"></v-list-item>
-        <v-list-item prepend-icon="mdi-message-text" title="Contacs" value="about"></v-list-item>
-        <v-list-item prepend-icon="mdi-delete" title="Flys" value="about"></v-list-item>
+        <router-link to="/"><v-list-item prepend-icon="mdi-view-dashboard" title="Main"
+            value="home"></v-list-item></router-link>
+        <router-link to="/contacts"><v-list-item prepend-icon="mdi-message-text" title="Contacs"
+            value="about"></v-list-item></router-link>
+        <router-link to="/flys"><v-list-item prepend-icon="mdi-delete" title="Flys" value="about"></v-list-item></router-link>
       </v-list>
     </v-navigation-drawer>
 
 
-    <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
-
-      <router-view />
+    <v-main class="">
+      <v-container>
+        <v-row no-gutters>
+          <v-col> <router-view /></v-col>
+        </v-row>
+      </v-container>
     </v-main>
-    <v-main style="height: 250px">
-      <div class="d-flex justify-end h-100">
 
 
-      </div>
-    </v-main>
   </v-layout>
 </template >
+

@@ -7,17 +7,20 @@ const routes = [
     component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
-        path: '/main',
+        path: '',
         component: () => import('@/components/Main.vue'),
-       
-      }
 
+      },
+      {
+        path: 'contacts',
+        component: () => import('@/components/Contacts.vue'),
+      },
+      {
+        path: 'flys',
+        component: () => import('@/components/Flys.vue')
+      }
     ]
-  },
-  {
-    path: '/contacts',
-    component: () => import('@/components/Contacts.vue'),
-  },
+  }
 ]
 
 const router = createRouter({
