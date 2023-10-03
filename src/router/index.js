@@ -18,6 +18,10 @@ const routes = [
       {
         path: 'flys',
         component: () => import('@/components/Flys.vue')
+      },
+      {
+        path: 'price',
+        component: () => import('@/components/Price.vue')
       }
     ]
   }

@@ -17,7 +17,10 @@ let drawer = ref(true)
             value="home"></v-list-item></router-link>
         <router-link to="/contacts"><v-list-item prepend-icon="mdi-message-text" title="Contacs"
             value="about"></v-list-item></router-link>
-        <router-link to="/flys"><v-list-item prepend-icon="mdi-delete" title="Flys" value="about"></v-list-item></router-link>
+        <router-link to="/flys"><v-list-item prepend-icon="mdi-delete" title="Flys"
+            value="abou"></v-list-item></router-link>
+        <router-link to="/price"><v-list-item prepend-icon="mdi-cash" title="Price"
+            value="abut"></v-list-item></router-link>
       </v-list>
     </v-navigation-drawer>
 
