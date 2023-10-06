@@ -1,3 +1,12 @@
+<script setup>
+import Feedback from './Feedback.vue';
+
+
+</script>
+
+
+
+
 <template>
   <H1 class="zagolovok">контакты</H1>
   <div class="d-flex flex-column ma-4 align-start">
@@ -43,7 +52,11 @@
         Контент-менеджер
       </p>
     </div>
+
+
+
   </div>
+  <Feedback/> 
 </template>
 
 <style scoped>
