@@ -18,7 +18,7 @@ let desserts =
             {
                 name: '4 🌱 Зоогумус (биокомпост) (минимальный заказ 100 литров ~ 30 килограмм)',
                 prices: [{ mass: 100, price: 20 }, { mass: 260, price: 19 }, { mass: 550, price: 18 }, { mass: 950, price: 17 }]
-         
+
             }
         ]
     )
@@ -42,20 +42,13 @@ let desserts =
             <tr v-for="item in desserts" :key="item.name">
                 <td>{{ item.name }}</td>
                 <td>
-                    <v-table v-for="price,index in item.prices" :key="index">
-                    <tr>
-                        <th>
-                            {{ price.mass }}
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                        {{ price.price }}
-                        </td>
-                    </tr>      
+                    <v-table>
+                        <tbody>
+                            <tr><th v-for="price, index in item.prices" :key="index">{{ price.mass }}</th></tr>
+                            <tr><th v-for="price, index in item.prices" :key="index">{{ price.price }}</th></tr>
+                        </tbody>
                     </v-table>
                 </td>
             </tr>
-        </tbody>
-    </v-table>
-</template >
+    </tbody>
+</v-table></template >

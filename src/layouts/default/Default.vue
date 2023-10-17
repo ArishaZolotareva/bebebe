@@ -21,6 +21,8 @@ let drawer = ref(true)
             value="abou"></v-list-item></router-link>
         <router-link to="/price"><v-list-item prepend-icon="mdi-cash" title="Price"
             value="abut"></v-list-item></router-link>
+        <router-link to="/order"><v-list-item prepend-icon="mdi-cart-outline" title="Price"
+            value="abut"></v-list-item></router-link>
       </v-list>
     </v-navigation-drawer>
 
