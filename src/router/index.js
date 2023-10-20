@@ -16,6 +16,10 @@ const routes = [
         component: () => import('@/components/Contacts.vue'),
       },
       {
+      path: 'catalog',
+        component: () => import('@/components/Catalog.vue'),
+      },
+      {
         path: 'flys',
         component: () => import('@/components/Flys.vue')
       },
