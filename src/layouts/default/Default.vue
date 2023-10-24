@@ -21,10 +21,10 @@ let drawer = ref(true)
             value="abou"></v-list-item></router-link>
         <router-link to="/price"><v-list-item prepend-icon="mdi-cash" title="Price"
             value="abut"></v-list-item></router-link>
-        <router-link to="/order"><v-list-item prepend-icon="mdi-cart-outline" title="Order"
-            value="abut"></v-list-item></router-link>
-            <router-link to="/catalog"><v-list-item prepend-icon="mdi-card-outline" title="Catalog"
+        <router-link to="/catalog"><v-list-item prepend-icon="mdi-card-outline" title="Catalog"
             value="abu"></v-list-item></router-link>
+        <router-link to="/admine"><v-list-item prepend-icon="mdi-basket-plus-outline" title="Admine"
+            value="abut"></v-list-item></router-link>
       </v-list>
     </v-navigation-drawer>
 
