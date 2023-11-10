@@ -1,10 +1,7 @@
 <script setup>
 import Feedback from './Feedback.vue';
 
-
 </script>
-
-
 
 
 <template>
@@ -57,10 +54,39 @@ import Feedback from './Feedback.vue';
 
   </div>
   <Feedback/> 
+
+  <div id="content">
+  <img width="100" src="../assets/fly2.png">
+  <div>Жираф</div>
+</div>
+
+  <!-- <div class="av">
+<img class="va" src="../assets/fly1.png" alt="">
+  </div> -->
+
 </template>
 
 <style scoped>
 .zagolovok {
   text-align: center;
 }
+
+/* .av {
+  width: 100px;
+  height: 70px;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+.va {
+  width: 100px;
+  height: 70px;
+} */
 </style>

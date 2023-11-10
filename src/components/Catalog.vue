@@ -14,6 +14,8 @@ cart.push(args)
 </script>
 
 <template>
+
+
     {{ cart }}
     <v-container>
         <v-row>
