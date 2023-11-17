@@ -1,10 +1,13 @@
 <script setup>
 import Feedback from './Feedback.vue';
 
+
+
 </script>
 
 
 <template>
+  <title>gif animation</title>
   <H1 class="zagolovok">контакты</H1>
   <div class="d-flex flex-column ma-4 align-start">
     <v-row class="justify-center">
@@ -53,40 +56,17 @@ import Feedback from './Feedback.vue';
 
 
   </div>
-  <Feedback/> 
+  <Feedback />
 
-  <div id="content">
-  <img width="100" src="../assets/fly2.png">
-  <div>Жираф</div>
+<h1>test</h1>
+<p>txtxtxtxtxt</p>
+<div>
+  <img src="../assets/fly1.gif">
 </div>
-
-  <!-- <div class="av">
-<img class="va" src="../assets/fly1.png" alt="">
-  </div> -->
-
 </template>
 
 <style scoped>
 .zagolovok {
   text-align: center;
 }
-
-/* .av {
-  width: 100px;
-  height: 70px;
-  animation-name: example;
-  animation-duration: 4s;
-}
-
-@keyframes example {
-  0%   {}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: green;}
-}
-
-.va {
-  width: 100px;
-  height: 70px;
-} */
 </style>
