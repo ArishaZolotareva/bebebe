@@ -7,7 +7,7 @@ const routes = [
     component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
-        path: '',
+        path: 'main',
         component: () => import('@/components/Main.vue'),
 
       },
@@ -30,6 +30,10 @@ const routes = [
       {
         path: 'admine',
         component: () => import('@/components/Admine.vue')
+      },    
+      {
+        path: '',
+        component: () => import('@/components/HomeTest.vue')
       }
 
     ]

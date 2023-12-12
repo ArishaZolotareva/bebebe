@@ -4,8 +4,14 @@ let drawer = ref(true)
 </script >
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar title="Application bar"><v-btn density="compact" variant="elevated" icon="mdi-view-list" size="x-large"
-        color="deep-purple-darken-2" @click="drawer = !drawer"></v-btn></v-app-bar>
+    <v-app-bar title="Application bar">
+
+        <v-btn density="compact" variant="elevated" icon="mdi-view-list" size="x-large" color="deep-purple-darken-2"
+          @click="drawer = !drawer">
+        </v-btn>
+        
+    </v-app-bar>
+
 
     <v-navigation-drawer v-model="drawer">
       <v-list>
@@ -13,7 +19,7 @@ let drawer = ref(true)
       </v-list>
       <v-divider></v-divider>
       <v-list density="compact" nav>
-        <router-link to="/"><v-list-item prepend-icon="mdi-view-dashboard" title="Main"
+        <router-link to="/main"><v-list-item prepend-icon="mdi-view-dashboard" title="Main"
             value="home"></v-list-item></router-link>
         <router-link to="/contacts"><v-list-item prepend-icon="mdi-message-text" title="Contacs"
             value="about"></v-list-item></router-link>
@@ -24,6 +30,8 @@ let drawer = ref(true)
         <router-link to="/catalog"><v-list-item prepend-icon="mdi-card-outline" title="Catalog"
             value="abu"></v-list-item></router-link>
         <router-link to="/admine"><v-list-item prepend-icon="mdi-basket-plus-outline" title="Admine"
+            value="abut"></v-list-item></router-link>
+            <router-link to="/"><v-list-item prepend-icon="mdi-basket-plus-outline" title="Home"
             value="abut"></v-list-item></router-link>
       </v-list>
     </v-navigation-drawer>
@@ -40,4 +48,5 @@ let drawer = ref(true)
 
   </v-layout>
 </template >
+
 
