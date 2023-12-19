@@ -1,48 +1,44 @@
 <script setup>
 import { ref } from "vue"
+import { useRouter } from "vue-router";
+
+let router = useRouter()
 let drawer = ref(true)
-</script >
+</script>
+
 <template>
   <v-layout class="rounded rounded-md">
     <v-app-bar title="Application bar">
 
-        <v-btn density="compact" variant="elevated" icon="mdi-view-list" size="x-large" color="deep-purple-darken-2"
-          @click="drawer = !drawer">
-        </v-btn>
-        
+      <v-btn density="compact" variant="elevated" icon="mdi-view-list" size="x-large" color="deep-purple-darken-2"
+        @click="drawer = !drawer">
+      </v-btn>
+
     </v-app-bar>
 
 
-    <v-navigation-drawer v-model="drawer">
+    <v-navigation-drawer v-model="drawer" temporary location="top">
       <v-list>
-        <v-list-item title="Navigation drawer"></v-list-item>
       </v-list>
       <v-divider></v-divider>
       <v-list density="compact" nav>
-        <router-link to="/main"><v-list-item prepend-icon="mdi-view-dashboard" title="Main"
-            value="home"></v-list-item></router-link>
-        <router-link to="/contacts"><v-list-item prepend-icon="mdi-message-text" title="Contacs"
-            value="about"></v-list-item></router-link>
-        <router-link to="/flys"><v-list-item prepend-icon="mdi-delete" title="Flys"
-            value="abou"></v-list-item></router-link>
-        <router-link to="/price"><v-list-item prepend-icon="mdi-cash" title="Price"
-            value="abut"></v-list-item></router-link>
-        <router-link to="/catalog"><v-list-item prepend-icon="mdi-card-outline" title="Catalog"
-            value="abu"></v-list-item></router-link>
-        <router-link to="/admine"><v-list-item prepend-icon="mdi-basket-plus-outline" title="Admine"
-            value="abut"></v-list-item></router-link>
-            <router-link to="/"><v-list-item prepend-icon="mdi-basket-plus-outline" title="Home"
-            value="abut"></v-list-item></router-link>
+        <v-list-item @click="router.push('/main')" prepend-icon="mdi-view-dashboard" title="Main"
+          value="home"></v-list-item>
+        <v-list-item @click="router.push('/contacts')" prepend-icon="mdi-message-text" title="Contacs"
+          value="about"></v-list-item>
+        <v-list-item @click="router.push('/price')" prepend-icon="mdi-cash" title="Price" value="abut"></v-list-item>
+        <v-list-item @click="router.push('/catalog')" prepend-icon="mdi-card-outline" title="Catalog"
+          value="about"></v-list-item>
+        <v-list-item @click="router.push('/admine')" prepend-icon="mdi-basket-plus-outline" title="Admine"
+          value="about"></v-list-item>
+        <v-list-item @click="router.push('/')" prepend-icon="mdi-basket-plus-outline" title="Home"
+          value="about"></v-list-item>
       </v-list>
     </v-navigation-drawer>
 
 
     <v-main class="">
-      <v-container>
-        <v-row no-gutters>
-          <v-col> <router-view /></v-col>
-        </v-row>
-      </v-container>
+      <router-view />
     </v-main>
 
 
