@@ -58,15 +58,143 @@ import Feedback from './Feedback.vue';
   </div>
   <Feedback />
 
-<h1>test</h1>
-<p>txtxtxtxtxt</p>
-<div>
-  <img src="../assets/fly1.gif">
-</div>
+  <div>
+
+  </div>
+  <div class="move">
+    <div class="Afly1"></div>
+    
+<div class="move"></div>
+<div class="Afly2"></div>
+  </div>
 </template>
 
 <style scoped>
 .zagolovok {
   text-align: center;
 }
+
+.Afly1 {
+  width: 100px;
+  height: 71px;
+  animation-duration: 0.1s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-direction: alternate-reverse;
+  display: inline-block;
+  transform:  translateY(1px);
+
+}
+
+@keyframes slidein {
+  0% {
+    background-image: url(../assets/fly1.png);
+  }
+
+  26% {
+    background-image: url(../assets/fly2.png);
+  }
+
+  51% {
+    background-image: url(../assets/fly3.png);
+  }
+
+  76% {
+    background-image: url(../assets/fly4.png);
+  }
+
+  100% {
+    background-image: url(../assets/fly1.png);
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(1000px);
+    visibility: hidden;
+  }
+
+  to {
+    transform: translateX(0px);
+    visibility: hidden;
+  }
+}
+
+
+
+.move {
+  display: inline-block;
+  animation-duration: 10s;
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-direction: normal, reverse;
+
+}
+
+
+img {
+  content: url();
+}
+
+.Afly2 {
+  width: 100px;
+  height: 71px;
+  animation-duration: 0.1s;
+  animation-name: slidein1;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-direction: alternate-reverse;
+  display: inline-block;
+
+
+}
+
+@keyframes slidein1 {
+  0% {
+    background-image: url(../assets/fly5.png);
+  }
+
+  26% {
+    background-image: url(../assets/fly6.png);
+  }
+
+  51% {
+    background-image: url(../assets/fly7.png);
+  }
+
+  76% {
+    background-image: url(../assets/fly8.png);
+  }
+
+  100% {
+    background-image: url(../assets/fly5.png);
+  }
+}
+
+/* @keyframes move {
+  from {
+    transform: translateX(0px);
+     visibility: hidden;
+  }
+
+  50% {
+    transform: translateX(1000px);
+    visibility: hidden;
+  }
+
+  to {
+    transform: translateX(0px);
+   
+  }
+
+
+} */
+
 </style>
