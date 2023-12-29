@@ -57,15 +57,11 @@ import Feedback from './Feedback.vue';
 
   </div>
   <Feedback />
-
-  <div>
-
-  </div>
-  <div class="move">
+  <div class="move1">
     <div class="Afly1"></div>
-    
-<div class="move"></div>
-<div class="Afly2"></div>
+  </div>
+  <div class="move2">
+    <div class="Afly2"></div>
   </div>
 </template>
 
@@ -84,7 +80,7 @@ import Feedback from './Feedback.vue';
   background-size: cover;
   animation-direction: alternate-reverse;
   display: inline-block;
-  transform:  translateY(1px);
+  transform: translateY(1px);
 
 }
 
@@ -113,27 +109,54 @@ import Feedback from './Feedback.vue';
 @keyframes move {
   from {
     transform: translateX(0px);
+    opacity: 0
+  }
+
+  5% {
+    opacity: 1
+  }
+
+  45% {
+    opacity: 1
   }
 
   50% {
     transform: translateX(1000px);
     visibility: hidden;
+    opacity: 0
+  }
+
+
+  60% {
+    opacity: 1
+  }
+
+  90% {
+    opacity: 1
   }
 
   to {
     transform: translateX(0px);
     visibility: hidden;
+    opacity: 0
   }
 }
 
 
-
-.move {
+.move1 {
   display: inline-block;
   animation-duration: 10s;
   animation-name: move;
   animation-iteration-count: infinite;
-  animation-direction: normal, reverse;
+  animation-direction: normal;
+}
+
+.move2 {
+  display: inline-block;
+  animation-duration: 10s;
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-direction:reverse;
 
 }
 
@@ -196,5 +219,4 @@ img {
 
 
 } */
-
 </style>
