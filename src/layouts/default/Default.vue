@@ -22,7 +22,7 @@ let drawer = ref(true)
       </v-list>
       <v-divider></v-divider>
       <v-list density="compact" nav>
-        <v-list-item @click="router.push('/main')" prepend-icon="mdi-view-dashboard" title="Main"
+        <v-list-item @click="router.push('/')" prepend-icon="mdi-view-dashboard" title="Main"
           value="home"></v-list-item>
         <v-list-item @click="router.push('/contacts')" prepend-icon="mdi-message-text" title="Contacs"
           value="about"></v-list-item>

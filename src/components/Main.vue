@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue"
+
 let card = [{ name: ' Яйца черной львинки', img: "https://farm-worm.com/wp-content/uploads/2022/03/YAytsa-chernoy-lvinki_002_Sbornik-yaits-chernoy-lvinki-1024x576.jpg", text: "Кормовой белок из личинок мух черной львинки оказывает положительное влияние на качество пищевых яиц: увеличивается их масса, содержание полиненасыщенных жирных кислот, при этом снижается уровень холестерина." },
 { name: "Живая личинка черной львинки", img: "https://hermetia.ru/wp-content/uploads/2018/08/zhivaya-lichinka-germetsiya.jpg", text: "Личинка львинки является рекордсменом по содержанию меланина, пигмента, обладающего высокой биологической активностью. Меланин обладает множеством полезных свойств, но наиболее ценной и изученной является его способность оказывать противоопухолевое, иммуномодулирующее" },
 { name: "Сушеные личинки черной львинки", img: "https://bio-genesis.ru/images/sushenye-lichinki-6.jpg", text: "Цельные сушеные личинки черной львинки содержат 40% белка и 35% жира в пересчете на сухое вещество.Белковый компонент состоит из незаменимых аминокислот, которые предпочтительнее использовать, чем другие ингредиенты животного происхождения, такие как мясокостная или рыбная мука." },
@@ -10,8 +11,16 @@ let card = [{ name: ' Яйца черной львинки', img: "https://farm-
 
 
 <template>
-  <v-container>
+  <v-parallax src="../assets/fly.jpg" height="400
+  " class="d-flex justify-center align-center">
 
+    <div class="d-flex justify-center align-center flex-column">
+      <H1>Муха </H1>
+      <H1>чёрная львинка</H1>
+    </div>
+  </v-parallax>
+
+  <v-container>
 
 
     <v-row>
@@ -30,7 +39,7 @@ let card = [{ name: ' Яйца черной львинки', img: "https://farm-
               <p>{{ item.text }}</p>
 
             </v-col>
-           
+
           </v-row>
         </v-card>
       </v-col>
